@@ -1,0 +1,16 @@
+$less-column-width: 60px;
+$less-gutter-width: 24px;
+
+@import "lessframework/grid";
+
+@mixin serif {
+    font-family: 'Copse', 'Georgia', serif;
+}
+
+@mixin sans {
+    font-family: 'Helvetica', 'Arial', sans-serif;
+}
+
+@mixin monospace {
+    font-family: 'Anonymous Pro', monospace;
+}

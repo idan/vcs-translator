@@ -1,3 +1,4 @@
 *.py[co]
 .epio-app
 dev.db
+vcstranslator_project/static/.sass-cache/
