@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 
-{% block content %}
+{% block body %}
     <form method="get" action="">
         {% for field in form %}
             {{ field }}
@@ -29,8 +29,8 @@
     {% endif %}
     <hr />
     <p><a href="{% url translation_help %}">Interested in helping out?</a></p>
-{% endblock %}
+{% endblock body %}
 
-{% block extra_body %}
+{% block extra_js %}
     <script type="text/javascript" src="{{ MEDIA_URL }}js/base.js"></script>
-{% endblock %}
+{% endblock extra_js %}
