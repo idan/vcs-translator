@@ -17,6 +17,14 @@
         <![endif]-->
         {% endblock css %}
         <script src="{{ MEDIA_URL }}js/modernizr-1.6.min.js"></script>
+        {% block jquery %}
+        <!--
+        I know, it's a sin, but this site can live with the sin of loading
+        jQuery early in the name of pretty webfont loading.
+        -->
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
+        <script>!window.jQuery && document.write('<script src="{{ MEDIA_URL }}js/jquery-1.4.4.min.js"><\/script>')</script>
+        {% endblock jquery %}
         {% block googlefont %}{% include "_googlefontdir.html" %}{% endblock googlefont %}
         {% block extra_head %}{% endblock extra_head %}
     </head>
@@ -37,10 +45,6 @@
             <a href="https://github.com/alex/vcs-translator">Get the code.</a>
         </p>
     </div>
-    {% block jquery %}
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
-    <script>!window.jQuery && document.write('<script src="{{ MEDIA_URL }}js/jquery-1.4.4.min.js"><\/script>')</script>
-    {% endblock jquery %}
     <!--[if lt IE 7 ]>
     <script src="{{ MEDIA_URL }}js/dd_belatedpng.js"></script>
     <script> DD_belatedPNG.fix('img, .png_bg'); //fix any <img> or .png_bg background-images </script>

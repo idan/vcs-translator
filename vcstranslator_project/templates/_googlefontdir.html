@@ -1,6 +1,13 @@
 <script>
     WebFontConfig = {
-        google: { families: [ 'Copse', 'Anonymous Pro' ] }
+        google: { families: [ 'Copse', 'Anonymous Pro' ] },
+        active: function() { 
+            if (Modernizr.opacity) {
+                $('body').hide().fadeIn();
+            } else {
+                $('body').css('visibility', 'visible');
+            }
+        }
     };
     (function() {
         var wf = document.createElement('script');
