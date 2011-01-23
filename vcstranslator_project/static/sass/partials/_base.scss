@@ -4,7 +4,7 @@ $default-transition-duration: 0.5s;
 // less framework defaults
 $less-column-width: 60px;
 $less-gutter-width: 24px;
-$less-font-family: 'Copse', 'Georgia', serif;
+$less-font-family: Copse, Georgia, serif;
 
 // site defaults
 $background: #EFEADC;
@@ -18,13 +18,13 @@ $chocolate: #3D1812;
 @import "compass/css3/transition";
 
 @mixin serif {
-    font-family: 'Copse', 'Georgia', serif;
+    font-family: Copse, Georgia, serif;
 }
 
 @mixin sans {
-    font-family: 'Helvetica', 'Arial', sans-serif;
+    font-family: Cabin, Helvetica, Arial, sans-serif;
 }
 
 @mixin monospace {
-    font-family: 'Anonymous Pro', monospace;
+    font-family: Inconsolata, Consolas, monospace;
 }
