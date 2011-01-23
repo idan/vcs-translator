@@ -16,22 +16,22 @@
     {% if results %}
     <section id="results">
         {% for vcs, result in results.items %}
-            <section class="result {{ result.success|yesno:'success,failure'}}" id="{{vcs}}">
+        <article class="result {{ result.success|yesno:'success,failure'}}" id="{{vcs}}">
             <h1>{{vcs}}{% if not result.success %}?{% endif %}</h1>
+            <div class="resultbody">
                 {% if result.success %}
-                    <code>
-                        $ {{ result.result }}
-                    </code>
-                    <p class="feedback"><a href="{% url translation_feedback %}">Report a bug &rarr;</a></p>
+                <code>
+                    $ {{ result.result }}
+                </code>
+                <p class="feedback"><a href="{% url translation_feedback %}">Report a bug &rarr;</a></p>
                 {% else %}
-                    <p>{{ result.result }}</p>
-                    <p>If you have a suggestion for how this should be translated, <a href="{% url translation_feedback %}">let us know!</a>
+                <p>{{ result.result }}</p>
+                <p>If you have a suggestion for how this should be translated, <a href="{% url translation_feedback %}">let us know!</a>
                 {% endif %}
-            </section>
+            </div>
+        </article>
         {% endfor %}
-
-
-        </section>
+    </section>
     {% endif %}
     <p><a href="{% url translation_help %}">Interested in helping out?</a></p>
 {% endblock body %}
