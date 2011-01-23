@@ -1,7 +1,21 @@
+// compass defaults
+$default-transition-duration: 0.3s;
+
+// less framework defaults
 $less-column-width: 60px;
 $less-gutter-width: 24px;
+$less-font-family: 'Copse', 'Georgia', serif;
+
+// site defaults
+$background: #EFEADC;
+$red: #E84193;
+$green: #A1EA5B;
+$blue: #74B4ED;
+$chocolate: #3D1812;
 
 @import "lessframework/grid";
+@import "compass/css3/text-shadow";
+@import "compass/css3/transition";
 
 @mixin serif {
     font-family: 'Copse', 'Georgia', serif;
