@@ -32,7 +32,12 @@
             letter-spacing: none;
         }
     }
+    
+    .result {
 
-
+        h1 {
+            @include big;
+        }
+    }
     
 }

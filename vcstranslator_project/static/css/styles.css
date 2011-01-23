@@ -262,6 +262,11 @@ body {
     padding: 0 5px;
     letter-spacing: none;
   }
+
+  .result h1 {
+    font-size: 26px;
+    line-height: 36px;
+  }
 }
 /* Overrides for iPhone 4
  * and other high device-pixel-ratio devices */
