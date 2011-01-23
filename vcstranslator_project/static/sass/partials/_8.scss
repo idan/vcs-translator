@@ -1,7 +1,13 @@
 /* Default 8-column layout
  * For tablets at 768 px, netbooks, and old browsers. */
 
-body { @include grid(8); }
+body {
+    @include grid(8);
+}
+
+#id_command {
+    width: 400px;
+}
 
 
 

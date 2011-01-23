@@ -29,22 +29,21 @@
         {% block extra_head %}{% endblock extra_head %}
     </head>
     <body {% block extra_body %}{% endblock extra_body %}>
-    <div id="content-holder">
-        <div id="content">
+        <header>
             <h1><a href="{% url home %}">The VCS Translator</a></h1>
-            {% for message in messages %}
-                <p class="message">{{ message }}</p>
-            {% endfor %}
-            {% block body %}{% endblock body %}
-        </div>
-    </div>
-    <div id="footer">
-        <p>
-            Built by <a href="http://alexgaynor.net">Alex Gaynor</a>.
-            Copyright Alex Gaynor 2011.
-            <a href="https://github.com/alex/vcs-translator">Get the code.</a>
-        </p>
-    </div>
+        </header>
+    {% if messages %}
+    <section class="messages">
+        {% for message in messages %}
+            <p>{{ message }}</p>
+        {% endfor %}
+    </section>
+    {% endif %}
+    {% block body %}{% endblock body %}
+    <footer>
+        Built by <a href="http://alexgaynor.net">Alex Gaynor</a>. All rights reserved, &copy; 2011.
+        <a href="https://github.com/alex/vcs-translator">Get the code.</a>
+    </footer>
     <!--[if lt IE 7 ]>
     <script src="{{ MEDIA_URL }}js/dd_belatedpng.js"></script>
     <script> DD_belatedPNG.fix('img, .png_bg'); //fix any <img> or .png_bg background-images </script>

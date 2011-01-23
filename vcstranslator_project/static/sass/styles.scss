@@ -9,7 +9,6 @@
 
 h1 {
     @include huge;
-    @include sans;
 }
 
 h2 {
@@ -20,10 +19,116 @@ h3 {
     @include big;
 }
 
+html {
+    background-color: $background;
+    -webkit-tap-highlight-color: rgb(255, 255, 0);
+}
+
+a {
+    color: $red;
+    @include transition;
+}
+
+a:hover {
+    color: darken($red, 30%);
+    @include transition;
+}
+
 body {
     @include serif;
-    background: rgb(232, 232, 232);
-    -webkit-tap-highlight-color: rgb(255, 255, 0);
+    margin: 0 auto;
+
+    &>header {
+        h1 {
+            a {
+                text-decoration: none;
+                color: $chocolate;
+                @include text-shadow($background 1px 1px 0px, transparentize($chocolate, 0.8) 2px 2px 0px);
+                @include transition-property('color');
+            }
+        }
+    }
+
+    &>footer {
+        border-top: darken($background, 5%) 1px solid;
+        padding-top: 23px;
+        margin-top: 48px;
+        @include normal;
+        color: darken($background, 20%);
+
+        a {
+            color: $chocolate;
+        }
+    }
+}
+
+#translateform {
+    margin: 48px 0 24px;
+
+    #id_command {
+        @include monospace;
+        font-size: 24px;
+        line-height: 46px;
+        height: 46px;
+        padding: 0 5px;
+        border: 1px solid transparentize($chocolate, 0.8);
+        margin: 0 10px 0 0;
+        -webkit-appearance: none;
+    }
+
+
+    #translatesubmit {
+        margin: 0;
+        padding: 0 10px;
+        height: 48px;
+        background: none;
+        color: $red;
+        border: none;
+        font-size: 24px;
+        line-height: 48px;
+        @include serif;
+        font-weight: normal;
+        -webkit-appearance: none;
+        @include transition;
+        @include transition-property('color,background');
+
+        letter-spacing: 1px;
+        
+        &:hover {
+            background-color: $red;
+            color: white;
+        }
+    }
+}
+
+.result {
+    margin-bottom: 24px;
+    padding: 0 0 24px 0;
+    code {
+        background-color: lighten($background, 5%);
+        display: block;
+        margin: 12px 0;
+    }
+
+    .feedback {
+        color: #444;
+        @include small;
+    }
+
+    h1 {
+        @include large;
+        letter-spacing: 1px;
+    }
+
+
+    &.success>h1 {
+        color: $red;
+    }
+
+    &.failure>h1 {
+        color: #666;
+    }
+
 }
 
 @import "partials/8";

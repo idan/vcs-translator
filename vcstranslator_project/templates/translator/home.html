@@ -6,10 +6,9 @@
             {% for field in form %}
                 {{ field }}
             {% endfor %}
-            <input type="submit" value="Translate" />
+            <input type="submit" id='translatesubmit' value="&rarr; Translate" />
         </form>
         {% if form.errors %}
-            <h2>Sorry :(</h2>
             <p>There were some errors with your submission</p>
             {{ form.errors }}
         {% endif %}
@@ -18,16 +17,13 @@
     <section id="results">
         {% for vcs, result in results.items %}
             <section class="result {{ result.success|yesno:'success,failure'}}" id="{{vcs}}">
+            <h1>{{vcs}}{% if not result.success %}?{% endif %}</h1>
                 {% if result.success %}
-                    <h1>Great Success!</h1>
-                    <div class="code">
-                        <code>
-                            $ {{ result.result }}
-                        </code>
-                    </div>
-                    <p>If this doesn't look right, <a href="{% url translation_feedback %}">please let us know.</a>
+                    <code>
+                        $ {{ result.result }}
+                    </code>
+                    <p class="feedback"><a href="{% url translation_feedback %}">Report a bug &rarr;</a></p>
                 {% else %}
-                    <h1>Sorry :(</h1>
                     <p>{{ result.result }}</p>
                     <p>If you have a suggestion for how this should be translated, <a href="{% url translation_feedback %}">let us know!</a>
                 {% endif %}

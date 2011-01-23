@@ -5,5 +5,34 @@
     body {
         @include grid(3);
         @include mobile-safari;
+
+        &>header {
+            h1 {
+                @include big;
+            }
+        }
     }
+
+        #translateform {
+        margin: 24px 0 24px;
+
+        #id_command {
+            font-size: 14px;
+            line-height: 22px;
+            height: 22px;
+            margin-right: 5px;
+            width: 110px;
+        }
+
+        #translatesubmit {
+            height: 24px;
+            line-height: 24px;
+            font-size: 14px;
+            padding: 0 5px;
+            letter-spacing: none;
+        }
+    }
+
+
+    
 }

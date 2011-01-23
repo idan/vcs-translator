@@ -46,7 +46,6 @@ h1 {
   font-size: 68px;
   line-height: 72px;
   letter-spacing: -1px;
-  font-family: 'Helvetica', 'Arial', sans-serif;
 }
 
 h2 {
@@ -59,10 +58,128 @@ h3 {
   line-height: 36px;
 }
 
+html {
+  background-color: #efeadc;
+  -webkit-tap-highlight-color: yellow;
+}
+
+a {
+  color: #e84193;
+  -moz-transition-property: all;
+  -webkit-transition-property: all;
+  -o-transition-property: all;
+  transition-property: all;
+  -moz-transition-duration: 0.5s;
+  -webkit-transition-duration: 0.5s;
+  -o-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+}
+
+a:hover {
+  color: #801047;
+  -moz-transition-property: all;
+  -webkit-transition-property: all;
+  -o-transition-property: all;
+  transition-property: all;
+  -moz-transition-duration: 0.5s;
+  -webkit-transition-duration: 0.5s;
+  -o-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+}
+
 body {
   font-family: 'Copse', 'Georgia', serif;
-  background: #e8e8e8;
-  -webkit-tap-highlight-color: yellow;
+  margin: 0 auto;
+}
+body > header h1 a {
+  text-decoration: none;
+  color: #3d1812;
+  text-shadow: #efeadc 1px 1px 0px, rgba(61, 24, 18, 0.2) 2px 2px 0px;
+  -moz-transition-property: color;
+  -webkit-transition-property: color;
+  -o-transition-property: color;
+  transition-property: color;
+}
+body > footer {
+  border-top: #e7dfcb 1px solid;
+  padding-top: 23px;
+  margin-top: 48px;
+  font-size: 16px;
+  line-height: 24px;
+  color: #cfc096;
+}
+body > footer a {
+  color: #3d1812;
+}
+
+#translateform {
+  margin: 48px 0 24px;
+}
+#translateform #id_command {
+  font-family: 'Anonymous Pro', monospace;
+  font-size: 24px;
+  line-height: 46px;
+  height: 46px;
+  padding: 0 5px;
+  border: 1px solid rgba(61, 24, 18, 0.2);
+  margin: 0 10px 0 0;
+  -webkit-appearance: none;
+}
+#translateform #translatesubmit {
+  margin: 0;
+  padding: 0 10px;
+  height: 48px;
+  background: none;
+  color: #e84193;
+  border: none;
+  font-size: 24px;
+  line-height: 48px;
+  font-family: 'Copse', 'Georgia', serif;
+  font-weight: normal;
+  -webkit-appearance: none;
+  -moz-transition-property: all;
+  -webkit-transition-property: all;
+  -o-transition-property: all;
+  transition-property: all;
+  -moz-transition-duration: 0.5s;
+  -webkit-transition-duration: 0.5s;
+  -o-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+  -moz-transition-property: color,background;
+  -webkit-transition-property: color,background;
+  -o-transition-property: color,background;
+  transition-property: color,background;
+  letter-spacing: 1px;
+}
+#translateform #translatesubmit:hover {
+  background-color: #e84193;
+  color: white;
+}
+
+.result {
+  margin-bottom: 24px;
+  padding: 0 0 24px 0;
+}
+.result code {
+  background-color: #f7f4ee;
+  display: block;
+  margin: 12px 0;
+}
+.result .feedback {
+  color: #444;
+  font-size: 13px;
+  line-height: 18px;
+}
+.result h1 {
+  font-size: 42px;
+  line-height: 48px;
+  letter-spacing: 1px;
+}
+.result.success > h1 {
+  color: #e84193;
+}
+.result.failure > h1 {
+  color: #666;
 }
 
 /* Default 8-column layout
@@ -70,6 +187,10 @@ body {
 body {
   width: 648px;
   padding: 84px 60px 0;
+}
+
+#id_command {
+  width: 400px;
 }
 
 /* 13-column layout
@@ -88,6 +209,28 @@ body {
     padding: 60px 42px 0;
     -webkit-text-size-adjust: 100%;
   }
+  body > header h1 {
+    font-size: 42px;
+    line-height: 48px;
+  }
+
+  #translateform {
+    margin: 24px 0 24px;
+  }
+  #translateform #id_command {
+    font-size: 16px;
+    line-height: 22px;
+    height: 22px;
+    margin-right: 5px;
+    width: 250px;
+  }
+  #translateform #translatesubmit {
+    height: 24px;
+    line-height: 24px;
+    font-size: 16px;
+    padding: 0 5px;
+    letter-spacing: none;
+  }
 }
 /* 3-column layout
  * For all iPhones, iPod Touches, and other 320 px mobiles. */
@@ -96,6 +239,28 @@ body {
     width: 228px;
     padding: 48px 46px 0;
     -webkit-text-size-adjust: 100%;
+  }
+  body > header h1 {
+    font-size: 26px;
+    line-height: 36px;
+  }
+
+  #translateform {
+    margin: 24px 0 24px;
+  }
+  #translateform #id_command {
+    font-size: 14px;
+    line-height: 22px;
+    height: 22px;
+    margin-right: 5px;
+    width: 110px;
+  }
+  #translateform #translatesubmit {
+    height: 24px;
+    line-height: 24px;
+    font-size: 14px;
+    padding: 0 5px;
+    letter-spacing: none;
   }
 }
 /* Overrides for iPhone 4
