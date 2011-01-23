@@ -6,7 +6,6 @@ from translator.utils import Translator
 
 class TranslationForm(forms.Form):
     command = forms.CharField(initial="command (e.g svn commit)...")
-    vcs = forms.ChoiceField(choices=[("", "Target VCS")] + zip(Translator.vcs, Translator.vcs))
 
     def clean_command(self):
         value = self.cleaned_data["command"]
@@ -21,7 +20,6 @@ class TranslationForm(forms.Form):
         assert self.is_valid()
         return {
             "source": self.cleaned_data["command"].split()[0],
-            "target": self.cleaned_data["vcs"],
             "command": self.cleaned_data["command"],
         }
 
@@ -29,7 +27,11 @@ class TranslationForm(forms.Form):
         assert self.is_valid()
         data = self.cleaned_data
         command, rest = data["command"].split(" ", 1)
-        return Translator(command.split()[0], data["vcs"]).translate(rest)
+        base_command = command.split()[0]
+        translations = {}
+        for vcs in Translator.vcs.keys():
+            translations[vcs] = Translator(base_command, vcs).translate(rest)
+        return translations
 
 
 class TranslationFeedbackForm(forms.ModelForm):
