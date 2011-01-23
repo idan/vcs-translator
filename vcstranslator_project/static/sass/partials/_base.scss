@@ -16,6 +16,8 @@ $chocolate: #3D1812;
 @import "lessframework/grid";
 @import "compass/css3/text-shadow";
 @import "compass/css3/transition";
+@import "compass/css3/box-shadow";
+@import "compass/utilities/general/clearfix";
 
 @mixin serif {
     font-family: Copse, Georgia, serif;
