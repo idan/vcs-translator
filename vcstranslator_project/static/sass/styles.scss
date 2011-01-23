@@ -64,38 +64,59 @@ body {
 
 #translateform {
     margin: 48px 0 24px;
+    width: 100%;
+    @include clearfix;
 
     #id_command {
-        @include monospace;
+        @include serif;
+        display: block;
+        float: left;
+        width: 470px; // 6 cols - padding
+        padding: 5px;
+        height: 37px;
+        line-height: 37px;
+        border: 0;
+        border-bottom: 1px dashed $background;
         font-size: 24px;
-        line-height: 46px;
-        height: 46px;
-        padding: 0 5px;
-        border: 1px solid transparentize($chocolate, 0.8);
-        margin: 0 10px 0 0;
+        background: darken($background, 10%);
+        color: $chocolate;
+        outline: none;
         -webkit-appearance: none;
+        @include transition;
+        @include box-shadow(darken($background, 20%), 0, 0, 6px, 0, true);
+
+        &:focus {
+            background-color: lighten($background, 5%);
+            @include box-shadow(#ccc, 0, 0, 6px, 0, true);
+        }
     }
 
 
+
+
     #translatesubmit {
-        margin: 0;
-        padding: 0 10px;
-        height: 48px;
-        background: none;
-        color: $red;
-        border: none;
-        font-size: 24px;
-        line-height: 48px;
         @include serif;
-        font-weight: normal;
+        display: block;
+        float: left;
+        width: 168px;
+        padding: 5px;
+        height: 48px;
+        line-height: 37px;
+        border: 0;
+        border-bottom: 1px dashed $background;
+        border-left: 1px solid $background;
+        font-size: 24px;
+        color: $chocolate;
+        text-transform: lowercase;
+        font-variant: small-caps;
+        letter-spacing: 1px;
+        background: darken($background, 20%);
         -webkit-appearance: none;
         @include transition;
         @include transition-property('color,background');
 
-        letter-spacing: 1px;
-        
         &:hover {
-            background-color: $red;
+            background-color: $blue;
             color: white;
         }
     }
@@ -117,6 +138,8 @@ body {
 
     h1 {
         @include large;
+        @include sans;
+        text-transform: uppercase;
         letter-spacing: 1px;
     }
 
