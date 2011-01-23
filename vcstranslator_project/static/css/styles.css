@@ -148,10 +148,10 @@ body > footer a {
 }
 #translateform #id_command:focus {
   background-color: #f7f4ee;
-  -moz-box-shadow: inset 0 0 6px 0 #cccccc;
-  -webkit-box-shadow: inset 0 0 6px 0 #cccccc;
-  -o-box-shadow: inset 0 0 6px 0 #cccccc;
-  box-shadow: inset 0 0 6px 0 #cccccc;
+  -moz-box-shadow: inset 0 0 6px 0 white;
+  -webkit-box-shadow: inset 0 0 6px 0 white;
+  -o-box-shadow: inset 0 0 6px 0 white;
+  box-shadow: inset 0 0 6px 0 white;
 }
 #translateform #translatesubmit {
   font-family: Copse, Georgia, serif;
