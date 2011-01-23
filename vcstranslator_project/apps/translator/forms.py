@@ -30,7 +30,8 @@ class TranslationForm(forms.Form):
         base_command = command.split()[0]
         translations = {}
         for vcs in Translator.vcs.keys():
-            translations[vcs] = Translator(base_command, vcs).translate(rest)
+            if vcs != base_command.lower():
+                translations[vcs] = Translator(base_command, vcs).translate(rest)
         return translations
 
 
