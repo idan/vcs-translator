@@ -118,7 +118,7 @@ body {
         @include transition-property('color,background');
         
         &:hover {
-            background-color: $blue;
+            background-color: $eggplant;
             color: white;
         }
     }
