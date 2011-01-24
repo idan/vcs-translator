@@ -30,13 +30,12 @@ html {
 }
 
 a {
-    color: $red;
+    color: $eggplant;
     @include transition;
 }
 
 a:hover {
-    color: $eggplant;
-    @include transition;
+    color: $red;
 }
 
 body {
