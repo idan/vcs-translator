@@ -215,12 +215,12 @@ body > footer a {
   height: 60px;
   line-height: 60px;
   text-align: center;
-  -moz-border-radius: 15px 0 0 15px;
-  -webkit-border-radius: 15px 0 0 15px;
-  -o-border-radius: 15px 0 0 15px;
-  -ms-border-radius: 15px 0 0 15px;
-  -khtml-border-radius: 15px 0 0 15px;
-  border-radius: 15px 0 0 15px;
+  -moz-border-radius: 10px 0 0 10px;
+  -webkit-border-radius: 10px 0 0 10px;
+  -o-border-radius: 10px 0 0 10px;
+  -ms-border-radius: 10px 0 0 10px;
+  -khtml-border-radius: 10px 0 0 10px;
+  border-radius: 10px 0 0 10px;
 }
 .result.success > h1 {
   background-color: #a1ea5b;
@@ -244,12 +244,12 @@ body > footer a {
   padding: 5px;
   line-height: 50px;
   background: transparent url(../img/result_failure.png) repeat center center;
-  -moz-border-radius: 0 15px 15px 0;
-  -webkit-border-radius: 0 15px 15px 0;
-  -o-border-radius: 0 15px 15px 0;
-  -ms-border-radius: 0 15px 15px 0;
-  -khtml-border-radius: 0 15px 15px 0;
-  border-radius: 0 15px 15px 0;
+  -moz-border-radius: 0 10px 10px 0;
+  -webkit-border-radius: 0 10px 10px 0;
+  -o-border-radius: 0 10px 10px 0;
+  -ms-border-radius: 0 10px 10px 0;
+  -khtml-border-radius: 0 10px 10px 0;
+  border-radius: 0 10px 10px 0;
 }
 .result code {
   background-color: #f7f4ee;
@@ -259,12 +259,12 @@ body > footer a {
   height: 50px;
   line-height: 50px;
   padding: 5px;
-  -moz-border-radius: 0 15px 15px 0;
-  -webkit-border-radius: 0 15px 15px 0;
-  -o-border-radius: 0 15px 15px 0;
-  -ms-border-radius: 0 15px 15px 0;
-  -khtml-border-radius: 0 15px 15px 0;
-  border-radius: 0 15px 15px 0;
+  -moz-border-radius: 0 10px 10px 0;
+  -webkit-border-radius: 0 10px 10px 0;
+  -o-border-radius: 0 10px 10px 0;
+  -ms-border-radius: 0 10px 10px 0;
+  -khtml-border-radius: 0 10px 10px 0;
+  border-radius: 0 10px 10px 0;
   -moz-box-shadow: rgba(68, 68, 68, 0.2) 0 3px 0 0;
   -webkit-box-shadow: rgba(68, 68, 68, 0.2) 0 3px 0 0;
   -o-box-shadow: rgba(68, 68, 68, 0.2) 0 3px 0 0;
@@ -319,12 +319,12 @@ body {
   }
 
   .result h1 {
-    -moz-border-radius: 15px 15px 0 0;
-    -webkit-border-radius: 15px 15px 0 0;
-    -o-border-radius: 15px 15px 0 0;
-    -ms-border-radius: 15px 15px 0 0;
-    -khtml-border-radius: 15px 15px 0 0;
-    border-radius: 15px 15px 0 0;
+    -moz-border-radius: 10px 10px 0 0;
+    -webkit-border-radius: 10px 10px 0 0;
+    -o-border-radius: 10px 10px 0 0;
+    -ms-border-radius: 10px 10px 0 0;
+    -khtml-border-radius: 10px 10px 0 0;
+    border-radius: 10px 10px 0 0;
     width: 100%;
     margin-bottom: 0;
     float: none;
@@ -342,23 +342,23 @@ body {
     float: none;
   }
   .result.failure p {
-    -moz-border-radius: 0 0 15px 15px;
-    -webkit-border-radius: 0 0 15px 15px;
-    -o-border-radius: 0 0 15px 15px;
-    -ms-border-radius: 0 0 15px 15px;
-    -khtml-border-radius: 0 0 15px 15px;
-    border-radius: 0 0 15px 15px;
+    -moz-border-radius: 0 0 10px 10px;
+    -webkit-border-radius: 0 0 10px 10px;
+    -o-border-radius: 0 0 10px 10px;
+    -ms-border-radius: 0 0 10px 10px;
+    -khtml-border-radius: 0 0 10px 10px;
+    border-radius: 0 0 10px 10px;
     text-align: center;
     min-height: 40px;
     line-height: 40px;
   }
   .result code {
-    -moz-border-radius: 0 0 15px 15px;
-    -webkit-border-radius: 0 0 15px 15px;
-    -o-border-radius: 0 0 15px 15px;
-    -ms-border-radius: 0 0 15px 15px;
-    -khtml-border-radius: 0 0 15px 15px;
-    border-radius: 0 0 15px 15px;
+    -moz-border-radius: 0 0 10px 10px;
+    -webkit-border-radius: 0 0 10px 10px;
+    -o-border-radius: 0 0 10px 10px;
+    -ms-border-radius: 0 0 10px 10px;
+    -khtml-border-radius: 0 0 10px 10px;
+    border-radius: 0 0 10px 10px;
   }
 }
 /* 3-column layout
