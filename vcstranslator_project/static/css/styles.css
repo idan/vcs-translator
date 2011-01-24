@@ -193,6 +193,7 @@ body > footer a {
   margin-bottom: 24px;
   padding: 0;
   width: 100%;
+  position: relative;
   background: transparent url(../img/stripe_shadow.png) repeat center center;
   -moz-border-radius: 10px;
   -webkit-border-radius: 10px;
@@ -289,10 +290,25 @@ body > footer a {
   box-shadow: rgba(68, 68, 68, 0.2) 0 1px 0 0;
 }
 .result .feedback {
+  position: absolute;
+  right: 15px;
+  top: 5px;
+  width: 50px;
   color: #444;
+  text-align: center;
   font-size: 13px;
   line-height: 18px;
-  padding: 5px;
+}
+.result .feedback a {
+  display: block;
+  width: 100%;
+  padding-bottom: 20px;
+  text-decoration: none;
+  color: #C4C4C4;
+  background: transparent url(../img/report.png) no-repeat center bottom;
+}
+.result .feedback a:hover {
+  color: #e84193;
 }
 
 /* Default 8-column layout

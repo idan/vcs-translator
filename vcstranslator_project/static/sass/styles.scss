@@ -128,6 +128,7 @@ body {
     margin-bottom: 24px;
     padding: 0;
     width: 100%;
+    position: relative;
     background: transparent url(../img/stripe_shadow.png) repeat center center;
     @include border-radius(10px);
     @include clearfix;
@@ -135,8 +136,8 @@ body {
     &.success {
         padding-bottom: 6px;
     }
-
-
+    
+    
     h1 {
         @include sans;
         font-size: 24px;
@@ -151,20 +152,17 @@ body {
         line-height: 60px;
         text-align: center;
         @include border-radius(10px 0 0 10px);
-
-
     }
     
     &.success>h1 {
         background-color: $eggplant;
         text-shadow: #444 0 0 3px;
         @include box-shadow(transparentize(#444, 0.8) 0 1px 0 0);
-
+        
         &.git { background-color: $blue; }
         &.hg { background-color: $green; }
         &.svn { background-color: $red; }
         &.bzr { background-color: $chocolate; }
-
     }
     
     &.failure>h1 {
@@ -172,7 +170,6 @@ body {
         font-size: 18px;
     }
     
-
     .resultbody {
         @include column(7,true);
         margin: 0;
@@ -187,8 +184,7 @@ body {
         @include border-radius(0 10px 10px 0);
         
     }
-
-
+    
     code {
         background-color: lighten($background, 5%);
         color: #444;
@@ -200,14 +196,29 @@ body {
         @include border-radius(0 10px 10px 0);
         @include box-shadow(transparentize(#444, 0.8) 0 1px 0 0);
     }
-
+    
     .feedback {
+        position: absolute;
+        right: 15px;
+        top: 5px;
+        width: 50px;
         color: #444;
+        text-align: center;
         @include small;
-        padding: 5px;
+
+        a {
+            display: block;
+            width: 100%;
+            padding-bottom: 20px;
+            text-decoration: none;
+            color: #C4C4C4;
+            background: transparent url(../img/report.png) no-repeat center bottom;
+            
+            &:hover {
+                color: $red;
+            }
+        }
     }
-
-
 }
 
 @import "partials/8";
