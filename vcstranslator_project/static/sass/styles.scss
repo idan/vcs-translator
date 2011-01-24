@@ -88,7 +88,7 @@ body {
         -webkit-appearance: none;
         @include transition;
         @include transition-property('color,background');
-        @include box-shadow(darken($background, 20%), 0, 0, 6px, 0, true);
+        //@include box-shadow(darken($background, 20%), 0, 0, 6px, 0, true);
 
         &:focus {
             background-color: lighten($background, 5%);

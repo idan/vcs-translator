@@ -145,10 +145,6 @@ body > footer a {
   -webkit-transition-property: color,background;
   -o-transition-property: color,background;
   transition-property: color,background;
-  -moz-box-shadow: inset 0 0 6px 0 #cfc096;
-  -webkit-box-shadow: inset 0 0 6px 0 #cfc096;
-  -o-box-shadow: inset 0 0 6px 0 #cfc096;
-  box-shadow: inset 0 0 6px 0 #cfc096;
 }
 #translateform #id_command:focus {
   background-color: #f7f4ee;
