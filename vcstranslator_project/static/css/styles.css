@@ -70,18 +70,6 @@ html {
 }
 
 a {
-  color: #e84193;
-  -moz-transition-property: all;
-  -webkit-transition-property: all;
-  -o-transition-property: all;
-  transition-property: all;
-  -moz-transition-duration: 0.5s;
-  -webkit-transition-duration: 0.5s;
-  -o-transition-duration: 0.5s;
-  transition-duration: 0.5s;
-}
-
-a:hover {
   color: #801047;
   -moz-transition-property: all;
   -webkit-transition-property: all;
@@ -93,6 +81,10 @@ a:hover {
   transition-duration: 0.5s;
 }
 
+a:hover {
+  color: #e84193;
+}
+
 body {
   font-family: Copse, Georgia, serif;
   margin: 0 auto;
@@ -102,7 +94,6 @@ body > header h1 {
 }
 body > header h1 a {
   text-decoration: none;
-  color: #3d1812;
   text-shadow: #efeadc 1px 1px 0px, rgba(61, 24, 18, 0.2) 2px 2px 0px;
   -moz-transition-property: color;
   -webkit-transition-property: color;
@@ -232,12 +223,24 @@ body > footer a {
   border-radius: 10px 0 0 10px;
 }
 .result.success > h1 {
-  background-color: #a1ea5b;
+  background-color: #801047;
   text-shadow: #444 0 0 3px;
   -moz-box-shadow: rgba(68, 68, 68, 0.2) 0 3px 0 0;
   -webkit-box-shadow: rgba(68, 68, 68, 0.2) 0 3px 0 0;
   -o-box-shadow: rgba(68, 68, 68, 0.2) 0 3px 0 0;
   box-shadow: rgba(68, 68, 68, 0.2) 0 3px 0 0;
+}
+.result.success > h1.git {
+  background-color: #74b4ed;
+}
+.result.success > h1.hg {
+  background-color: #a1ea5b;
+}
+.result.success > h1.svn {
+  background-color: #e84193;
+}
+.result.success > h1.bzr {
+  background-color: #3d1812;
 }
 .result.failure > h1 {
   color: #3d1812;

@@ -47,7 +47,6 @@ body {
             text-transform: lowercase;
             a {
                 text-decoration: none;
-                color: $chocolate;
                 @include text-shadow($background 1px 1px 0px, transparentize($chocolate, 0.8) 2px 2px 0px);
                 @include transition-property('color');
             }
@@ -145,12 +144,20 @@ body {
         line-height: 60px;
         text-align: center;
         @include border-radius(10px 0 0 10px);
+
+
     }
     
     &.success>h1 {
-        background-color: $green;
+        background-color: $eggplant;
         text-shadow: #444 0 0 3px;
         @include box-shadow(transparentize(#444, 0.8) 0 3px 0 0);
+
+        &.git { background-color: $blue; }
+        &.hg { background-color: $green; }
+        &.svn { background-color: $red; }
+        &.bzr { background-color: $chocolate; }
+
     }
     
     &.failure>h1 {

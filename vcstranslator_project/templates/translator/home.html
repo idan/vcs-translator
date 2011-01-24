@@ -17,7 +17,7 @@
     <section id="results">
         {% for vcs, result in results.items %}
         <article class="result {{ result.success|yesno:'success,failure'}}" id="{{vcs}}">
-            <h1>{{vcs}}{% if not result.success %}?{% endif %}</h1>
+        <h1 class="{{vcs}}">{{vcs}}{% if not result.success %}?{% endif %}</h1>
             <div class="resultbody">
                 {% if result.success %}
                 <code>
