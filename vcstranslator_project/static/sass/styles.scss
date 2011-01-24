@@ -19,6 +19,11 @@ h3 {
     @include big;
 }
 
+abbr {
+    font-variant: small-caps;
+    text-transform: lowercase;
+}
+
 html {
     background-color: $background;
     -webkit-tap-highlight-color: rgb(255, 255, 0);
@@ -40,6 +45,7 @@ body {
     
     &>header {
         h1 {
+            text-transform: lowercase;
             a {
                 text-decoration: none;
                 color: $chocolate;

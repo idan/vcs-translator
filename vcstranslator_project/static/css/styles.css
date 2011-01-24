@@ -59,6 +59,11 @@ h3 {
   line-height: 36px;
 }
 
+abbr {
+  font-variant: small-caps;
+  text-transform: lowercase;
+}
+
 html {
   background-color: #efeadc;
   -webkit-tap-highlight-color: yellow;
@@ -91,6 +96,9 @@ a:hover {
 body {
   font-family: Copse, Georgia, serif;
   margin: 0 auto;
+}
+body > header h1 {
+  text-transform: lowercase;
 }
 body > header h1 a {
   text-decoration: none;
