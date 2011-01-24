@@ -17,19 +17,39 @@
         margin: 24px 0 24px;
 
         #id_command {
-            font-size: 16px;
-            line-height: 22px;
-            height: 22px;
-            margin-right: 5px;
-            width: 250px;
+            width: 218px;
+        }
+    }
+
+    .result {
+        h1 {
+            @include border-radius(15px 15px 0 0);
+            width: 100%;
+            margin-bottom: 0;
+            float: none;
+            height: 36px;
+            line-height: 36px;
         }
 
-        #translatesubmit {
-            height: 24px;
-            line-height: 24px;
-            font-size: 16px;
-            padding: 0 5px;
-            letter-spacing: none;
+        &.success>h1 {
+            @include box-shadow(none);
+        }
+
+
+        .resultbody {
+            width: 100%;
+            float: none;
+        }
+
+        &.failure p {
+            @include border-radius(0 0 15px 15px);
+            text-align: center;
+            min-height: 40px;
+            line-height: 40px
+        }
+
+        code {
+            @include border-radius(0 0 15px 15px);
         }
     }
 }

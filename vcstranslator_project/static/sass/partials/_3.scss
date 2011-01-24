@@ -8,7 +8,7 @@
 
         &>header {
             h1 {
-                @include big;
+                font-size: 24px;
             }
         }
     }
@@ -17,27 +17,54 @@
         margin: 24px 0 24px;
 
         #id_command {
-            font-size: 14px;
-            line-height: 22px;
-            height: 22px;
-            margin-right: 5px;
-            width: 110px;
+            font-size: 16px;
+            padding: 2px 5px;
+            line-height: 19px;
+            height: 19px;
+            width: 134px;
+            @include border-radius(none);
+            -webkit-appearance: none;
         }
 
         #translatesubmit {
-            height: 24px;
-            line-height: 24px;
-            font-size: 14px;
+            font-size: 16px;
             padding: 0 5px;
+            line-height: 19px;
+            height: 24px;
             letter-spacing: none;
+            width: 84px;
         }
     }
     
     .result {
-
         h1 {
-            @include big;
+            @include border-radius(15px 15px 0 0);
+            width: 100%;
+            margin-bottom: 0;
+            float: none;
+            height: 36px;
+            line-height: 36px;
+        }
+
+        &.success>h1 {
+            @include box-shadow(none);
+        }
+
+
+        .resultbody {
+            width: 100%;
+            float: none;
+        }
+
+        &.failure p {
+            @include border-radius(0 0 15px 15px);
+            text-align: center;
+            min-height: 40px;
+            line-height: 40px
+        }
+
+        code {
+            @include border-radius(0 0 15px 15px);
         }
     }
-    
 }

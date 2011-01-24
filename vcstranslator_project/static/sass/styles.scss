@@ -37,7 +37,7 @@ a:hover {
 body {
     @include serif;
     margin: 0 auto;
-
+    
     &>header {
         h1 {
             a {
@@ -48,7 +48,7 @@ body {
             }
         }
     }
-
+    
     &>footer {
         border-top: darken($background, 5%) 1px solid;
         padding-top: 23px;
@@ -63,7 +63,7 @@ body {
 }
 
 #translateform {
-    margin: 48px 0 24px;
+    margin: 48px 0;
     width: 100%;
     @include clearfix;
 
@@ -83,6 +83,7 @@ body {
         outline: none;
         -webkit-appearance: none;
         @include transition;
+        @include transition-property('color,background');
         @include box-shadow(darken($background, 20%), 0, 0, 6px, 0, true);
 
         &:focus {
@@ -90,9 +91,6 @@ body {
             @include box-shadow(white, 0, 0, 6px, 0, true);
         }
     }
-
-
-
 
     #translatesubmit {
         @include serif;
@@ -114,7 +112,7 @@ body {
         -webkit-appearance: none;
         @include transition;
         @include transition-property('color,background');
-
+        
         &:hover {
             background-color: $blue;
             color: white;
@@ -125,32 +123,69 @@ body {
 .result {
     margin-bottom: 24px;
     padding: 0 0 24px 0;
+    width: 100%;
+    @include clearfix;
+    
+    h1 {
+        @include sans;
+        font-size: 24px;
+        text-transform: lowercase;
+        letter-spacing: 1px;
+        @include column(1);
+        float: left;
+        color: white;
+        height: 60px;
+        line-height: 60px;
+        text-align: center;
+        @include border-radius(15px 0 0 15px);
+    }
+    
+    &.success>h1 {
+        background-color: $green;
+        text-shadow: #444 0 0 3px;
+        @include box-shadow(transparentize(#444, 0.8) 0 3px 0 0);
+    }
+    
+    &.failure>h1 {
+        color: $chocolate;;
+        font-size: 18px;
+        background: transparent url(../img/result_failure.png) repeat center center;
+    }
+    
+
+    .resultbody {
+        @include column(7,true);
+        float: right;
+    }
+
+    &.failure p {
+        min-height: 50px;
+        padding: 5px;
+        line-height: 50px;
+        background: transparent url(../img/result_failure.png) repeat center center;
+        @include border-radius(0 15px 15px 0);
+        
+    }
+
+
     code {
         background-color: lighten($background, 5%);
+        color: #444;
         display: block;
-        margin: 12px 0;
+        margin: 0;
+        height: 50px;
+        line-height: 50px;
+        padding: 5px;
+        @include border-radius(0 15px 15px 0);
+        @include box-shadow(transparentize(#444, 0.8) 0 3px 0 0);
     }
 
     .feedback {
         color: #444;
         @include small;
+        padding: 5px;
     }
 
-    h1 {
-        @include large;
-        @include sans;
-        text-transform: uppercase;
-        letter-spacing: 1px;
-    }
-
-
-    &.success>h1 {
-        color: $red;
-    }
-
-    &.failure>h1 {
-        color: #666;
-    }
 
 }
 
