@@ -35,7 +35,7 @@ a {
 }
 
 a:hover {
-    color: darken($red, 30%);
+    color: $eggplant;
     @include transition;
 }
 

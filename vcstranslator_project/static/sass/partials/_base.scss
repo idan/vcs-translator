@@ -12,6 +12,8 @@ $red: #E84193;
 $green: #A1EA5B;
 $blue: #74B4ED;
 $chocolate: #3D1812;
+$eggplant: darken($red, 30%);
+
 
 @import "lessframework/grid";
 @import "compass/css3";
