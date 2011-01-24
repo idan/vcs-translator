@@ -126,10 +126,17 @@ body {
 
 .result {
     margin-bottom: 24px;
-    padding: 0 0 24px 0;
+    padding: 0;
     width: 100%;
+    background: transparent url(../img/stripe_shadow.png) repeat center center;
+    @include border-radius(10px);
     @include clearfix;
     
+    &.success {
+        padding-bottom: 6px;
+    }
+
+
     h1 {
         @include sans;
         font-size: 24px;
@@ -151,7 +158,7 @@ body {
     &.success>h1 {
         background-color: $eggplant;
         text-shadow: #444 0 0 3px;
-        @include box-shadow(transparentize(#444, 0.8) 0 3px 0 0);
+        @include box-shadow(transparentize(#444, 0.8) 0 1px 0 0);
 
         &.git { background-color: $blue; }
         &.hg { background-color: $green; }
@@ -161,9 +168,8 @@ body {
     }
     
     &.failure>h1 {
-        color: $chocolate;;
+        color: $chocolate;
         font-size: 18px;
-        background: transparent url(../img/result_failure.png) repeat center center;
     }
     
 
@@ -178,7 +184,6 @@ body {
         min-height: 50px;
         padding: 5px;
         line-height: 50px;
-        background: transparent url(../img/result_failure.png) repeat center center;
         @include border-radius(0 10px 10px 0);
         
     }
@@ -193,7 +198,7 @@ body {
         line-height: 50px;
         padding: 5px;
         @include border-radius(0 10px 10px 0);
-        @include box-shadow(transparentize(#444, 0.8) 0 3px 0 0);
+        @include box-shadow(transparentize(#444, 0.8) 0 1px 0 0);
     }
 
     .feedback {

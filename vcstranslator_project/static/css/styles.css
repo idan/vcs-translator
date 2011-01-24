@@ -191,10 +191,20 @@ body > footer a {
 
 .result {
   margin-bottom: 24px;
-  padding: 0 0 24px 0;
+  padding: 0;
   width: 100%;
+  background: transparent url(../img/stripe_shadow.png) repeat center center;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -o-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -khtml-border-radius: 10px;
+  border-radius: 10px;
   overflow: hidden;
   *zoom: 1;
+}
+.result.success {
+  padding-bottom: 6px;
 }
 .result h1 {
   font-family: Lato, Helvetica, Arial, sans-serif;
@@ -221,10 +231,10 @@ body > footer a {
 .result.success > h1 {
   background-color: #801047;
   text-shadow: #444 0 0 3px;
-  -moz-box-shadow: rgba(68, 68, 68, 0.2) 0 3px 0 0;
-  -webkit-box-shadow: rgba(68, 68, 68, 0.2) 0 3px 0 0;
-  -o-box-shadow: rgba(68, 68, 68, 0.2) 0 3px 0 0;
-  box-shadow: rgba(68, 68, 68, 0.2) 0 3px 0 0;
+  -moz-box-shadow: rgba(68, 68, 68, 0.2) 0 1px 0 0;
+  -webkit-box-shadow: rgba(68, 68, 68, 0.2) 0 1px 0 0;
+  -o-box-shadow: rgba(68, 68, 68, 0.2) 0 1px 0 0;
+  box-shadow: rgba(68, 68, 68, 0.2) 0 1px 0 0;
 }
 .result.success > h1.git {
   background-color: #74b4ed;
@@ -241,7 +251,6 @@ body > footer a {
 .result.failure > h1 {
   color: #3d1812;
   font-size: 18px;
-  background: transparent url(../img/result_failure.png) repeat center center;
 }
 .result .resultbody {
   width: 564px;
@@ -253,7 +262,6 @@ body > footer a {
   min-height: 50px;
   padding: 5px;
   line-height: 50px;
-  background: transparent url(../img/result_failure.png) repeat center center;
   -moz-border-radius: 0 10px 10px 0;
   -webkit-border-radius: 0 10px 10px 0;
   -o-border-radius: 0 10px 10px 0;
@@ -275,10 +283,10 @@ body > footer a {
   -ms-border-radius: 0 10px 10px 0;
   -khtml-border-radius: 0 10px 10px 0;
   border-radius: 0 10px 10px 0;
-  -moz-box-shadow: rgba(68, 68, 68, 0.2) 0 3px 0 0;
-  -webkit-box-shadow: rgba(68, 68, 68, 0.2) 0 3px 0 0;
-  -o-box-shadow: rgba(68, 68, 68, 0.2) 0 3px 0 0;
-  box-shadow: rgba(68, 68, 68, 0.2) 0 3px 0 0;
+  -moz-box-shadow: rgba(68, 68, 68, 0.2) 0 1px 0 0;
+  -webkit-box-shadow: rgba(68, 68, 68, 0.2) 0 1px 0 0;
+  -o-box-shadow: rgba(68, 68, 68, 0.2) 0 1px 0 0;
+  box-shadow: rgba(68, 68, 68, 0.2) 0 1px 0 0;
 }
 .result .feedback {
   color: #444;
