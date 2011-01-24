@@ -208,8 +208,9 @@ body > footer a {
   font-size: 24px;
   text-transform: lowercase;
   letter-spacing: 1px;
-  width: 60px;
-  margin-right: 24px;
+  width: 84px;
+  padding: 0;
+  margin: 0;
   float: left;
   color: white;
   height: 60px;
@@ -237,6 +238,8 @@ body > footer a {
 }
 .result .resultbody {
   width: 564px;
+  margin: 0;
+  padding: 0;
   float: right;
 }
 .result.failure p {
