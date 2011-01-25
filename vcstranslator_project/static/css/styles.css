@@ -277,7 +277,7 @@ body > footer a {
   margin: 0;
   height: 50px;
   line-height: 50px;
-  padding: 5px;
+  padding: 5px 10px;
   -moz-border-radius: 0 10px 10px 0;
   -webkit-border-radius: 0 10px 10px 0;
   -o-border-radius: 0 10px 10px 0;
