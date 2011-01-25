@@ -5,7 +5,7 @@ from translator.utils import Translator
 
 
 class TranslationForm(forms.Form):
-    command = forms.CharField(initial="command (e.g svn commit)...")
+    command = forms.CharField()
 
     def clean_command(self):
         value = self.cleaned_data["command"]
@@ -30,8 +30,7 @@ class TranslationForm(forms.Form):
         base_command = command.split()[0]
         translations = {}
         for vcs in Translator.vcs.keys():
-            if vcs != base_command.lower():
-                translations[vcs] = Translator(base_command, vcs).translate(rest)
+            translations[vcs] = Translator(base_command, vcs).translate(rest)
         return translations
 
 

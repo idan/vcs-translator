@@ -12,6 +12,7 @@ def home(request):
     if form.is_valid():
         results = form.translate()
         request.session["last_translation"] = form.get_data()
+        form = TranslationForm()
     return render_to_response("translator/home.html", {
         "form": form,
         "results": results,

@@ -71,6 +71,10 @@ body {
     width: 100%;
     @include clearfix;
 
+    label { display: none; }
+    
+
+
     #id_command {
         @include serif;
         display: block;
@@ -93,6 +97,11 @@ body {
         &:focus {
             background-color: lighten($background, 5%);
             @include box-shadow(white, 0, 0, 6px, 0, true);
+        }
+
+        &.labelled {
+            color: darken($background, 35%);
+            @include transition;
         }
     }
 

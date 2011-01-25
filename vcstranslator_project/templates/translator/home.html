@@ -3,9 +3,8 @@
 {% block body %}
     <div id="translateform">
         <form method="get" action="">
-            {% for field in form %}
-                {{ field }}
-            {% endfor %}
+            {{ form.command.label_tag }}
+            {{ form.command }}
             <input type="submit" id='translatesubmit' value="Translate" />
         </form>
         {% if form.errors %}
@@ -38,5 +37,16 @@
 {% endblock body %}
 
 {% block extra_js %}
-    <script type="text/javascript" src="{{ MEDIA_URL }}js/base.js"></script>
+    <script type="text/javascript" src="{{ MEDIA_URL }}js/jquery.labelify.min.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function(){
+        var labelClass= 'labelled';
+        var placeholderText = function(input) {return "command (e.g. svn commit)…";}
+        
+        $("#id_command").labelify({
+            labelledClass: labelClass,
+            text: placeholderText
+        });
+    });
+    </script>
 {% endblock extra_js %}
