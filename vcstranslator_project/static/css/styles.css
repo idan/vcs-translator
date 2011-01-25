@@ -294,7 +294,6 @@ body > footer a {
   right: 15px;
   top: 5px;
   width: 50px;
-  color: #444;
   text-align: center;
   font-size: 13px;
   line-height: 18px;
@@ -394,6 +393,15 @@ body {
     -khtml-border-radius: 0 0 10px 10px;
     border-radius: 0 0 10px 10px;
   }
+  .result .feedback {
+    top: 10px;
+  }
+  .result .feedback a {
+    padding: 0;
+    color: #eee;
+    color: rgba(255, 255, 255, 0.9);
+    background: none;
+  }
 }
 /* 3-column layout
  * For all iPhones, iPod Touches, and other 320 px mobiles. */
@@ -474,6 +482,15 @@ body {
     -ms-border-radius: 0 0 15px 15px;
     -khtml-border-radius: 0 0 15px 15px;
     border-radius: 0 0 15px 15px;
+  }
+  .result .feedback {
+    top: 10px;
+  }
+  .result .feedback a {
+    padding: 0;
+    color: #eee;
+    color: rgba(255, 255, 255, 0.9);
+    background: none;
   }
 }
 /* Overrides for iPhone 4

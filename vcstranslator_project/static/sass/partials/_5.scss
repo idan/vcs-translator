@@ -51,5 +51,16 @@
         code {
             @include border-radius(0 0 10px 10px);
         }
+
+        .feedback {
+            top: 10px;
+            
+            a {
+                padding: 0;
+                color: #eee;
+                color: rgba(255,255,255,0.9);
+                background: none;
+            }
+        }
     }
 }
